@@ -203,7 +203,7 @@ def save_new_spritesheet_and_xml(new_spritesheet_image: Image, xml_tree: ET.Elem
 	new_spritesheet_image.save(f"{export_dir}/{input_filename}.png")
 	xml_tree.write(f"{export_dir}/{input_filename}.xml", encoding="utf-8", xml_declaration=True)
 
-def process(input_path : str) -> None:
+def generate_new_spritesheet(input_path : str) -> None:
 	"""
 	Main processing function.
 	"""
@@ -221,4 +221,4 @@ def process(input_path : str) -> None:
 Main entry loop
 """
 if __name__ == "__main__":
-	process(sys.argv[1])
+	generate_new_spritesheet(sys.argv[1])
